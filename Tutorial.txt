@@ -1,0 +1,35 @@
+cara install node js wa part 1 dan 2 dan 3 :
+
+mkdir dirname
+npm init
+npm i whatsapp-web.js
+
+npm install express
+npm install socket.io
+npm install qrcode
+npm install -g nodemon
+npm i http
+
+run in postman to get url curl
+
+npm i express-fileupload
+npm install puppeteer
+npm install express-validator
+npm install axios
+
+on package.json { "start": "nodemon app.js", }
+
+
+
+= Other Command =
+
+- npm i npm@latest
+- npm run update-all-modules
+- npm install
+- npm audit fix 
+- 
+
+
+
+
+

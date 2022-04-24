@@ -1,0 +1,27 @@
+# List Tutorial Setup WA API CVM Linux : 
+
+======= Install WebServer =======
+- sudo apt-get upgrade; apt-get update; apt-get install unzip; apt-get install net-tools; sudo useradd -m arifsiddikm; sudo passwd arifsiddikm;
+- sudo apt-get install apache2; sudo apt-get install mysql-server; sudo apt-get install php libapache2-mod-php php-mysql php-curl php-gd php-json php-mcrypt php-zip; sudo apt-get install phpmyadmin; nano /etc/apache2/sites-available/000-default.conf;
+- mysql -u root -p
+- CREATE USER 'arifsiddikm'@'localhost' IDENTIFIED WITH mysql_native_password BY 'arifstkj150302'; GRANT ALL PRIVILEGES ON *.* TO 'arifsiddikm'@'localhost' WITH GRANT OPTION;
+
+======= Install NodeJS & NPM & Composer =======
+- curl -sL https://deb.nodesource.com/setup_17.x -o nodesource_setup.sh; sudo bash nodesource_setup.sh;sudo apt-get install -y nodejs; php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"; php -r "if (hash_file('sha384', 'composer-setup.php') === '906a84df04cea2aa72f40b5f787e49f22d4c2f19492ac310e8cba5b96ac8b64115ac402c8cd292b8a03482574915d1a8') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"; php composer-setup.php; php -r "unlink('composer-setup.php');"; sudo apt-get install composer;
+
+======= Install FTP =======
+- sudo apt install vsftpd; sudo systemctl start vsftpd; sudo systemctl enable vsftpd; sudo cp /etc/vsftpd.conf /etc/vsftpd.conf_default; sudo ufw allow 20/tcp; sudo ufw allow 21/tcp; sudo mkdir /srv/ftp/new_location; sudo usermod -d /srv/ftp/new_location ftp;
+- sudo nano /etc/vsftpd.conf
+- chroot_local_user=YES; chroot_list_file=/etc/vsftpd.chroot_list; sudo systemctl restart vsftpd.service;
+
+======= Setup WA API =========
+- mkdir waweb; cd /var/www/waweb; npm init;
+- npm i whatsapp-web.js; npm install -g nodemon; sudo apt-get install chromium-browser; sudo add-apt-repository ppa:saiarcot895/chromium-dev; npm install mysql2; npm install express; npm install socket.io; npm install qrcode; npm install -g nodemon; npm i http; npm i express-fileupload; npm install puppeteer; npm install express-validator; npm install axios; npm i npm@latest; npm install; sudo apt-get install ca-certificates fonts-liberation libappindicator3-1 libasound2 libatk-bridge2.0-0 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgbm1 libgcc1 libglib2.0-0 libgtk-3-0 libnspr4 libnss3 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 lsb-release wget xdg-utils; 
+- git clone "https://github.com/arifsiddikm/whatsapp-api/"; cd whatsapp-api; mv * /var/www/waweb; cd ..; rm -r whatsapp-api; cd /var/www/; sudo chown arifsiddikm *; sudo chmod 7777 *; cd /var/www/waweb/; sudo chown arifsiddikm *; sudo chmod 7777 *; cd /var/www/waweb/helpers/; sudo chown arifsiddikm *; sudo chmod 7777 *; cd /var/www/waweb/; npm audit fix; npm fund; nano /var/www/waweb/package.json;
+- on package.json { "start": "nodemon app.js", }
+
+======= Last =========
+- sudo apt-get update;
+
+======= Other =========
+- lsof -i -P -n | grep LISTEN

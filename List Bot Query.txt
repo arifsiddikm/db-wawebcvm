@@ -1,0 +1,24 @@
+=========== List Bot Query ==============
+
+
+- Buka/Tutup Page CV Manual
+- b0tcvm/tutuppagecv / tutuppagecv
+- b0tcvm/bukapagecv / bukapagecv
+- b0tcvm/menu
+- b0tcvm/checkoutboxwa
+- b0tcvm/checkoutboxmail
+- b0tcvm/checkoutboxtelegram
+- b0tcvm/restartwapending
+- b0tcvm/restartmailpending
+- b0tcvm/restarttelegrampending
+- 
+- pengiriman CV PDF via WA saat done 
+- info orderan cv baru all jenis
+- info orderan cv diproses all jenis
+- info orderan cv selesai all jenis
+- info testimoni baru ke grup team
+- info testimoni ke pengirim testi untuk terimakasih
+- info loker
+- info konfirmasi pembayaran yg harus diapprov manajer + open download + ngirim cv via WA Bot 
+- info konfirmasi approval update ganti nama pada cv auto 
+- kirim testimoni via wa 
